@@ -58,9 +58,9 @@ static int lfs_fill_super(struct super_block *sb, struct fs_context *fc)
 	int ret;
 
 	static const struct tree_descr files[] = {
-		[2] = {"file_1", &lfs_file_ops, S_IRUGO},
-		[3] = {"file_2", &lfs_file_ops, S_IRUGO},
-		[4] = {"file_3", &lfs_file_ops, S_IRUGO},
+		[2] = {"file1", &lfs_file_ops, S_IRUGO},
+		[3] = {"file2", &lfs_file_ops, S_IRUGO},
+		[4] = {"file3", &lfs_file_ops, S_IRUGO},
 		{""},
 	};
 
@@ -113,3 +113,6 @@ static void __exit lfs_exit(void)
 
 module_init(lfs_init);
 module_exit(lfs_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Remi Debord");
